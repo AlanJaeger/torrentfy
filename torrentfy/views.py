@@ -7,4 +7,8 @@ from django.views import View
 class DashboardView(View):
     def get(self, request):
         return render(request,'inicio/index.html')
-# Create your views here.
+
+
+class TelaCadastroView(View):
+    def get(self, request):
+        return render(request, 'inicio/telacadastro.html')

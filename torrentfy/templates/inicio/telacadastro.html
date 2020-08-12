@@ -42,19 +42,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav" style="margin-left:-6px;">
+          <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link texto" href="#">inicio</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link texto" href="#equipe">quem somos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link texto" href="#contato">contato</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link texto" href="{% url 'cadastro' %}">cadastro</a>
+                <a class="nav-link texto" href="{% url 'dashboard' %}" style="float:right">inicio</a>
               </li>
             </ul>
           </div>
@@ -71,15 +62,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                           <div class="circle bottom left"></div>
                           <div class="circle bottom right"></div>
                           <div class="block b-bottom">
-                            <h1 style="color:white;font-family: 'Recursive', sans-serif;">login</h1></div>                                  
+                            <h1 style="color:white;font-family: 'Recursive', sans-serif;">Cadastro</h1></div>                                  
                           <div id="" class="row b-bottom">
-          
+                            <div class="block three-fourths b-right">
+                              <label class="tag">Nome</label>
+                              <input type="text" maxlength="60" placeholder="" />
+                            </div>
+                          </div>
+
+                          <div id="" class="row b-bottom">
                             <div class="block three-fourths b-right">
                               <label class="tag">Email</label>
                               <input type="text" maxlength="60" placeholder="" />
                             </div>
-                  
                           </div>
+                          
                       
                           <div id="" class="row b-bottom">
                             <div class="block half b-right">
@@ -88,86 +85,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                             </div>
                             
                           </div>
-                          <button type="button" class="btn btn-success btn-block but">entrar</button>
+                          <button type="button" class="btn btn-success btn-block but">Cadastro</button>
                         </div>
                       </div>
                     </div>
         
                     <div class="col-md-6" style="background-color:black; margin-top:-11px; height:350px;"> 
-                      <h3 class="texto2" >
-                        <p align="justify">
-                            Somos o TORRENT.FY Viemos ao mundo com o objetivo de democratizar o acesso a música por meio do torrent.
-                        </p>
+                      <h3 class="texto2">
+                          <p align="justify">
+                            Cadastre-se e tenha em seu navegador,acesso a musicas de todo mundo,via streaming torrent.
+                          </p>
                       </h3>
                     </div>
                   </div>
-            </div>
-            
-          
-            <div class="row" style="margin-right:0px;" id="equipe">
-              <div class="col-md-4" style=""> 
-                <div class="card" style="width:300px; margin-left:60px;background-color:black;">
-                  <div class="card-image">
-                    <img src="{% static 'img/gobra.jpg' %}" style="width:100%;border-top-left-radius: 13px;
-                    border-top-right-radius: 13px;">
-                  </div>
-                  <div class="card-text" style="margin-top:50px;">
-                    <h2>Técnologias</h2>
-                    <p align="justify">Usamos python com django em nosso back-end, e bootstrap em nosso front-end</p>
-                  </div>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <div class="value">4<sup>m</sup></div>
-                      <div class="type">read</div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card" style="width:300px; margin-left:60px; background-color:black;">
-                  <div class="card-image">
-                    <img src="{% static 'img/kop.jpg' %}" style="width:100%;border-top-left-radius: 13px;
-                    border-top-right-radius: 13px;">
-                  </div>
-                  <div class="card-text" style="margin-top:50px;">
-                    <h2>Equipe</h2>
-                    <p align="justify">Temos uma equipe apaixonada por música, e versada em programação.</p>
-                  </div>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <div class="value">4<sup>m</sup></div>
-                      <div class="type">read</div>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card" style="width:300px; margin-left:60px;background-color:black;">
-                  <div class="card-image">
-                    <div class="card-image">
-                      <img src="{% static 'img/fi.jpg' %}" style="width:100%;border-top-left-radius: 13px;
-                      border-top-right-radius: 13px;">
-                    </div>
-                  </div>
-                  <div class="card-text" style="margin-top:50px;">
-                    <h2>Filosofia</h2>
-                    <p align="justify">Entendemos que musica é uma arte que precisa ser compartilhada.</p>
-                  </div>
-                  <div class="card-stats">
-                    <div class="stat">
-                      <div class="value">4<sup>m</sup></div>
-                      <div class="type">read</div>
-                    </div>
-                   
-                  </div>
-                </div>
-              </div>
             </div>    
-            
             <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3" style="background-color: black; margin-top:100px;" id="contato">
   
