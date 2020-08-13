@@ -30,6 +30,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 </script>
+<style>
+ul{
+  display: none;
+}
+label{
+  margin-top:41px;
+  margin-left: -20px;
+  font-family: 'Recursive', sans-serif;    
+	position: absolute;
+	left: 0;
+	padding: 5px;
+
+	font-size: 12px;
+	color: #DBDED3;
+
+	background-color: black;
+}
+</style>
   
   <body style="background-color:black;">
       <nav class="navbar navbar-expand-lg navbar-light navbar border-bottom border-dark" style="padding:50px; background-color:black;">
@@ -62,30 +80,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                           <div class="circle bottom left"></div>
                           <div class="circle bottom right"></div>
                           <div class="block b-bottom">
-                            <h1 style="color:white;font-family: 'Recursive', sans-serif;">Cadastro</h1></div>                                  
-                          <div id="" class="row b-bottom">
-                            <div class="block three-fourths b-right">
-                              <label class="tag">Nome</label>
-                              <input type="text" maxlength="60" placeholder="" />
-                            </div>
-                          </div>
-
-                          <div id="" class="row b-bottom">
-                            <div class="block three-fourths b-right">
-                              <label class="tag">Email</label>
-                              <input type="text" maxlength="60" placeholder="" />
-                            </div>
-                          </div>
-                          
-                      
-                          <div id="" class="row b-bottom">
-                            <div class="block half b-right">
-                              <label class="tag">Senha</label>
-                              <input type="password" maxlength="40" placeholder="" />
-                            </div>
-                            
-                          </div>
-                          <button type="button" class="btn btn-success btn-block but">Cadastro</button>
+                            <h1 style="color:white;font-family: 'Recursive', sans-serif;">Cadastro</h1></div>
+                          <form action="." method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input class="btn btn-success btn-block but" type="submit" value="Registrar">
+                        </form>
+                        
                         </div>
                       </div>
                     </div>
