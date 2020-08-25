@@ -53,8 +53,8 @@ canvas{
 }
 
 .particles-js-canvas-el{
-    margin-top: -800px;
-    height: 100% !important;
+    margin-top: -1300px;
+    height: 1300px !important;
     width: 100% !important;
 }
 
@@ -204,6 +204,14 @@ a:hover{
     font-family: 'Recursive', sans-serif;
     font-size: 25px;    
     color: white!important;
+}
+
+.texto22{
+  margin-top:29px;
+  font-family: 'Recursive', sans-serif;
+  font-size: 25px;    
+  color: white!important;
+  
 }
 
 .texto1::after{
@@ -359,7 +367,7 @@ p { margin: 0;}
 /* General Form Elements */
 
 input[type=text], textarea { 
-    background: transparent;
+  background: transparent;
 	width: 100%;
 	padding: 15px;
 	box-sizing: border-box;
